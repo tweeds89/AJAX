@@ -3,8 +3,10 @@
     <head>             
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <title>Tabela do edycji</title>
     </head>
     <body>
+        <h2>Dodawaj/usuwaj dane z tabeli bez odświeżania strony</h2>
         <div id="live_data"></div>
         <script>
             $(document).ready(function(){
@@ -21,14 +23,14 @@
                 takeData();
  
                 //event do zapisania danych do bazy po kliknięciu
-                $(document).on('click', '#add_btn', function(){ 
-                    var first_name = $('#first_name').html();
-                    var last_name = $('#last_name').html();
-                    if(first_name == ''){
+                $(document).on('click', '.add_btn', function(){ 
+                    var first_name = $('#first_name').text();
+                    var last_name = $('#last_name').text();
+                    if(first_name === ''){
                         alert("Uzupełnij imię!");  
                         return false;
                     }
-                    if(last_name == ''){
+                    if(last_name === ''){
                         alert("Uzupełnij nazwisko!"); 
                         return false;
                     }
@@ -43,7 +45,22 @@
                             takeData();
                         }
                     });
-                });               
+                }); 
+                //usuwanie danych z tabeli
+                $(document).on('click', '.delete_btn', function(){
+                    var id = $(this).data("id");
+                    if (confirm("Na pewno chcesz usunąć?")){
+                        $.ajax({
+                            url: "delete.php",
+                            method: "POST",
+                            data: {id:id},
+                            success: function(data){
+                                alert(data);
+                                takeData();
+                            }
+                        });
+                    }
+                });
             });       
         </script>       
     </body>

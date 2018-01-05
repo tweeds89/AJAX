@@ -10,10 +10,10 @@ include 'connection.php';
         <div>
             <table>
                 <tr>
-                    <th>Id</th>
-                    <th>Imię</th>
-                    <th>Nazwisko</th>
-                    <th>Dodaj/Usuń</th>
+                    <th width="100px">Id</th>
+                    <th width="350px">Imię</th>
+                    <th width="350px">Nazwisko</th>
+                    <th width="150px">Dodaj/Usuń</th>
                 </tr>
 <?php
 //tutaj jest wysyłane zapytanie z funkcji takeData. Pobierane sa dane z bazy,
@@ -27,7 +27,7 @@ $result = mysqli_query($conn, $sql);
             <td>' .$row["id"].'</td>
             <td class="first_name">' .$row["first_name"].'</td>
             <td class="last_name">' .$row["last_name"].'</td>
-            <td><button type="submit" name="delete_btn" class="delete_btn">x</button></td>                          
+            <td><button type="submit" name="delete_btn" class="delete_btn" data-id="'.$row['id'].'">Usuń</button></td>                          
         </tr>';
        }
         echo '
@@ -35,10 +35,16 @@ $result = mysqli_query($conn, $sql);
             <td></td>
             <td id="first_name" contenteditable></td>
             <td id="last_name" contenteditable></td>
-            <td><button type="submit" name="add_btn" id="add_btn">+</button>                        
+            <td><button type="submit" name="add_btn" class="add_btn">Dodaj</button>                        
         </tr>';                    
     }else{
-       echo '<tr><td>Baza jest pusta</td></tr>';      
+       echo '
+          <tr>
+            <td></td>
+            <td id="first_name" contenteditable></td>
+            <td id="last_name" contenteditable></td>
+            <td><button type="submit" name="add_btn" class="add_btn">Dodaj</button>                        
+        </tr>';        
     }?>
             </table>
         </div>

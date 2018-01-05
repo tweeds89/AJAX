@@ -1,7 +1,44 @@
-table {
-    border-collapse: collapse;
+body{  
+  text-align: center;
+}
+
+table{
+  margin: auto;   
+  border-collapse: collapse; 
 }
 
 table, th, td {
-    border: 1px solid black;
+  border: 1px solid black;
+}
+
+th{
+  background-color: #99FFFF;
+}
+
+#first_name:empty:after {
+  content: 'Wpisz imię';
+  color: #ccc;  
+} 
+
+#last_name:empty:after {
+  content: 'Wpisz nazwisko';
+  color: #ccc;  
+}
+
+.delete_btn{  
+  background-color: #FF0000;
+  font-family: verdana;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.add_btn{  
+  background-color: #66CC66;
+  font-family: verdana;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
 }
