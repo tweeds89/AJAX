@@ -42,3 +42,15 @@ th{
   cursor: pointer;
   border: none;
 }
+
+table{
+  counter-reset: rowNumber;
+}
+
+table .numeric{
+  counter-increment: rowNumber;
+}
+
+table .numeric td:first-child::before{
+  content: counter(rowNumber);
+}

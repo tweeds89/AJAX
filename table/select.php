@@ -10,7 +10,7 @@ include 'connection.php';
         <div>
             <table>
                 <tr>
-                    <th width="100px">Id</th>
+                    <th width="100px">Nr</th>
                     <th width="350px">Imię</th>
                     <th width="350px">Nazwisko</th>
                     <th width="150px">Dodaj/Usuń</th>
@@ -23,8 +23,8 @@ $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0){
        while($row = mysqli_fetch_array($result)){ 
         echo '
-        <tr>
-            <td>' .$row["id"].'</td>
+        <tr class = "numeric">
+            <td></td>
             <td class="first_name">' .$row["first_name"].'</td>
             <td class="last_name">' .$row["last_name"].'</td>
             <td><button type="submit" name="delete_btn" class="delete_btn" data-id="'.$row['id'].'">Usuń</button></td>                          
