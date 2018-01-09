@@ -17,29 +17,12 @@
         </div>
         <br/>
         <script>
-            /*
-          $(document).ready(function(){ 
-              
-            $("#first").change(function(){
-                if($(this).val() == "degrees"){
-                     $("#second").show();
-                     $("#third").hide(); 
-                     
-                }else if($(this).val() == "none"){
-                    $("#second").hide();
-                     $("#third").hide(); 
-           
-                }else{
-                    $("#second").hide();
-                    $("#third").show()
-                }               
-            });
-            */         
+                 
            $(document).ready(function(){
                 $("#first").change(function(){
                     if($(this).val() == "degrees"){
                       $.ajax({
-                        url:"degrees.php",
+                        url:"degrees/degrees.php",
                         method:"POST",
                         success: function(data){
                             $('#show').html(data);
@@ -47,7 +30,7 @@
                       });
                     }else if($(this).val() == "currency"){
                       $.ajax({
-                        url:"currency.php",
+                        url:"currency/currency.php",
                         method:"POST",
                         success: function(data){
                             $('#show').html(data);

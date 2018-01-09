@@ -11,7 +11,7 @@
                 event.preventDefault();
                 var form_data = $(this).serialize();
                   $.ajax({
-                    url:"degreesConvert.php",
+                    url:"degrees/degreesConvert.php",
                     method:"POST",
                     data:form_data,
                     dataType: "html",
