@@ -1,3 +1,45 @@
+body{
+  text-align: center;
+}
+
+#first{
+  font-size: 20px;
+  webkit-border-radius: 5px;
+  moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #eec111;
+  color: #fff;
+  width: 400px;
+}
+
+#unit{
+  font-size: 20px;
+  webkit-border-radius: 5px;
+  moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #eec111;
+  color: #fff;
+}
+
+#amount{
+  font-size: 20px;
+  webkit-border-radius: 5px;
+  moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#calc-button{
+
+  font-size: 125%;
+  color: white;
+  border-radius: 4px;
+  background: rgb(66, 184, 221);
+}
+
+#display{
+  font-size: 20px;
+}
+
 #select3{
-    display: none;
+  display: none;
 }

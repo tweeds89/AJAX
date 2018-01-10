@@ -40,8 +40,10 @@
                       }?>                
               </select>
               <input type="submit" id="insert" value="Wprowadź"/>        
-          </form>     
-          <input type="submit" id="ex_btn" value="Przejdź do wymiany walut"/>  
+          </form> 
+          <p>
+          <input type="submit" id="ex_btn" value="Przejdź do wymiany walut"/> 
+          </p>
       </div>
       <div id="insert"></div>
   </body>

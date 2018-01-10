@@ -42,6 +42,7 @@
           <input type="number" name="to_exchange"/>
           
           <select id="select1" name='select1'>
+              <option>Waluta</option>
               <?php
                 for ($i = 0; $i< count($array); $i++){
                   echo '<option value = "'.$array[$i].'">'.$array[$i].'</option>';  
@@ -50,6 +51,7 @@
           </select>
           na
           <select id="select2" name="select2">
+              <option>Waluta</option>
                <?php
                 for ($i = 1; $i< count($array); $i++){
                   echo '<option value = "'.$array[$i].'">'.$array[$i].'</option>';  

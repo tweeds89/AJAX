@@ -1,19 +1,24 @@
 <?php
 
 if( $_SERVER['REQUEST_METHOD'] === 'POST'){
-    $number = $_POST['number'];
-    $degrees = $_POST['degrees'];
+    $amount = $_POST['amount'];
+    $unit = $_POST['unit'];
     
-    switch ($degrees){
-        case 'celToFahr':
-            echo $number.' st w skali Celsjusza to ok. '. $fahr = ($number * 2 + 32). ' st w skali Fahrenheita' ;
+   if($amount !=''){
+    switch ($unit){
+       case 'Celsius to Fahrenheit':
+            echo $amount.' st w skali Celsjusza to ok. '. $fahr = ($amount * 2 + 32). ' st w skali Fahrenheita' ;
             break;
         
-       case 'fahrToCel':
-           echo $number. ' st w skali Fahrenheita to ok. '. $cel = (($number - 32)/2). ' st w skali Celsjusza';
+       case 'Fahrenheit to Celsius':
+           echo $amount. ' st w skali Fahrenheita to ok. '. $cel = (($amount - 32)/2). ' st w skali Celsjusza';
            break;
-    }   
+    }  
+   }else{
+      echo 'Uzupełnij liczbę stopni!';
+   }
 }
+
   
 
 

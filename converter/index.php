@@ -5,10 +5,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <title>Przeliczanie jednostek</title>
     </head>
-    <body>
-       
-        <div id="show">
-            <h2>Przeliczaj jednostki</h2>
+    <body>     
+      <div id="show">
+          <h2>Przeliczaj jednostki</h2>
         <select name="first" id="first">
             <option value="none">Wybierz akcję</option>
             <option value="degrees">Przeliczanie stopni</option>

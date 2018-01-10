@@ -7,7 +7,7 @@
     </script>
     <script>
         $(document).ready(function(){
-            $("#convert").on('submit', function(event){ 
+            $("#form-convert").on('submit', function(event){ 
                 event.preventDefault();
                 var form_data = $(this).serialize();
                   $.ajax({
@@ -24,19 +24,20 @@
     </script>
   </head>
   <body>
-      <div>        
-         <form method="POST" id="convert">  
-            Podaj liczbę stopni:
-            <input type="number" name="number" class="number" id="number"/>
-             <select name="degrees" id="degrees">           
+      <div class="form-convert">        
+         <form method="POST" id="form-convert">      
+             <input type="number" step="0.001" name="amount" class="amount" id="amount" placeholder="Podaj liczbę stopni"/>
+             <select name="unit" id="unit">           
                 <?php
-                $array=['celToFahr', 'fahrToCel'];
+                $array=['Celsius to Fahrenheit', 'Fahrenheit to Celsius'];
                   foreach($array as $result){
                     echo '<option value ="'.$result.'">'.$result.'</option>';
                 } ?>    
             </select>
-                <input type="submit" id="button" value="Przelicz"/>
-            </form>          
+            <p>
+                <input type="submit" id="calc-button" value="Przelicz"/>
+            </p>   
+         </form>          
       </div>
       <div id="display"></div>
   </body>
