@@ -1,5 +1,6 @@
 body{
   text-align: center;
+font-size: 18px; 
 }
 
 #first{
@@ -14,8 +15,8 @@ body{
 
 #unit{
   font-size: 20px;
-  webkit-border-radius: 5px;
-  moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
   background-color: #eec111;
   color: #fff;
@@ -23,8 +24,8 @@ body{
 
 #amount{
   font-size: 20px;
-  webkit-border-radius: 5px;
-  moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
@@ -34,6 +35,7 @@ body{
   color: white;
   border-radius: 4px;
   background: rgb(66, 184, 221);
+  border:none; 
 }
 
 #display{
@@ -43,3 +45,43 @@ body{
 #select3{
   display: none;
 }
+
+#currency-exchange, #insert-new-exchange{
+    background:none;
+     border:none; 
+     padding:0;
+     cursor:pointer;
+font-size: 20px;
+}
+
+#currency-list, #select1, #select2, #select3{
+  moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #eec111;
+  color: #fff;
+  border:none; 
+  font-size: 14px;
+}
+
+#insert-to-db, #exchange-btn{
+  moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: rgb(66, 184, 221);
+  color: #fff;
+  border:none;
+  font-size: 14px; 
+}
+
+table{
+  margin: auto;   
+  border-collapse: collapse; 
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+
+

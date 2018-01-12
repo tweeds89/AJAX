@@ -15,8 +15,7 @@
         </select>
         </div>
         <br/>
-        <script>
-                 
+        <script>                
            $(document).ready(function(){
                 $("#first").change(function(){
                     if($(this).val() == "degrees"){
@@ -29,7 +28,7 @@
                       });
                     }else if($(this).val() == "currency"){
                       $.ajax({
-                        url:"currency/currency.php",
+                        url:"currency/chooseAction.php",
                         method:"POST",
                         success: function(data){
                             $('#show').html(data);

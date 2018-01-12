@@ -3,8 +3,8 @@
 include 'connection.php';
 
 if( $_SERVER['REQUEST_METHOD'] === 'POST'){
-    $exchange = $_POST['exchange'];
-    $currency = $_POST['currency'];
+    $exchange = $_POST['actual_exchange'];
+    $currency = $_POST['currency_list'];
     $date = date("Y-m-d");
 
     switch ($currency) {

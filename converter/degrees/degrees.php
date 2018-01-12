@@ -40,6 +40,11 @@
          </form>          
       </div>
       <div id="display"></div>
+      <div>
+        <p>
+           <a href="index.php">Strona główna</a>
+        </p>
+      </div>
   </body>
 </html>
 
