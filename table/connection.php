@@ -2,7 +2,11 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "coderslab";
+$password = "";
 $dbname = "ajax_table";
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Wystąpił błąd: " . $conn->connect_error);
+}

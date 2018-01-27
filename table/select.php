@@ -18,7 +18,7 @@ include 'connection.php';
 <?php
 //tutaj jest wysyłane zapytanie z funkcji takeData. Pobierane sa dane z bazy,
 //konwertowane do tabeli i odsyłane do funkcji takeData
-$sql = "SELECT * FROM ajax_table ORDER BY id DESC";
+$sql = "SELECT * FROM users ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0){
        while($row = mysqli_fetch_array($result)){ 
