@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "coderslab";
+$password = "";
 $dbname = "currency";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
